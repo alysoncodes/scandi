@@ -1,0 +1,206 @@
+//coming soon page 
+
+#collection-64ac37161df1a22776b9d801{
+  footer{
+    display: none !important;
+  }
+}
+
+#collection-64ac37161df1a22776b9d801{.header-title-logo img {
+content: url('https://static1.squarespace.com/static/647e0de217a3bd2f52d87c84/t/64b4832bd66d2545b9202c47/1689551659907/scandi-light-logo.png') !important;
+max-height:inherit !important;
+  }}
+
+
+/*------------------------------------
+ *   VARIABLES
+ *------------------------------------*/
+
+/**GLOBAL COLORS**/
+
+@white: #FFFFFF;
+@black: #000000;
+@grey: #C0C4C9;
+@beige: #F1E8E1;
+
+/**BREAKPOINTS**/
+
+@maxBP: 1649px;
+@deskBP: 768px;
+@mBP: 767px;
+
+/**OTHER VARIABLES**/
+
+@mobile:~"only screen and (max-width: 767px)";
+@desktop:~"only screen and (min-width: 768px)";
+@tablet: ~"only screen and (max-width: 1024px) and (min-width:768px)";
+@desktopXL: ~"only screen and (min-width: 1649px)"; 
+
+
+/*------------------------------------
+ *   MIXINS
+ *------------------------------------*/
+
+
+
+
+/*------------------------------------
+ *   CUSTOM FONTS
+ *------------------------------------*/
+
+@font-face {
+  font-family: 'sunshower';
+  src: url('https://static1.squarespace.com/static/627563ab2999a507f5f657c2/t/627aa2fb0b7a435085a861a0/1652204283320/SunshowerDreamsRegular.woff') format('woff'), url('https://static1.squarespace.com/static/627563ab2999a507f5f657c2/t/627aa32751e1815712fab5b6/1652204327956/SunshowerDreamsRegular.woff2') format('woff2'),
+}
+
+/*------------------------------------
+ *   GLOBAL STYLES
+ *------------------------------------*/
+html{
+  scroll-behavior:smooth;
+}
+
+h2, h3{
+  font-weight: 200!important;
+}
+
+p{
+  font-weight: 100!important;
+}
+//DEFINE KEYFRAMES
+
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+//button centering on mobile
+
+@media @mobile {
+  .sqs-block-button * {
+    text-align: center!important;
+    z-index: 100!important;
+  }
+}
+
+//center text on mobile
+@media only screen and (max-width: 640px) {h1,h2,h3,h4,p{
+  text-align: center!important;
+  }}
+
+
+//button styling
+
+//disable sticky on edit mode
+
+body.sqs-edit-mode-active {
+#sections {
+ flex-direction:column !important;
+ flex-wrap:nowrap !important;
+  .page-section {
+    width:100% !important;
+    position:relative !important;
+  }
+}
+}
+
+//fixing button center issue
+@media @mobile{
+.sqs-block-button-container--left {
+display:block !important;
+  }}
+
+
+
+
+FIX IG ISSUE
+
+#block-yui_3_17_2_1_1665283305769_24491{img.loaded{
+  top: 0!important;
+  }}
+.sqs-gallery-design-strip-slide img{
+  object-fit: cover;
+}
+
+/*------------------------------------
+ *  HEADER
+ *------------------------------------*/
+
+//inquire button
+
+
+
+/*------------------------------------
+ *  FOOTER
+ *------------------------------------*/
+
+/*------------------------------------
+ * PAGES: HOME
+ *------------------------------------*/
+
+// add back in if needed -translateY(-120%)
+
+#block-yui_3_17_2_1_1689552427659_3188{
+  transform:  scale(1.5);
+  transition: 2s ease;
+}
+
+.scrolled {#block-yui_3_17_2_1_1689552427659_3188{
+   transform: none;
+  
+}
+}
+
+section[data-section-id="64b487d173a0026ed5e9415f"]{
+  position: sticky !important;
+  top: 0 !important;
+}
+
+section[data-section-id="64c00f03b3b82b7cffc676fd"]{ .page-section .section-border{
+  background-color: transparent!important;
+  }
+  .content-wrapper{
+    background-color: transparent!important;
+  }
+
+}
+
+.page-section.transparent .section-border {
+  background-color: rgba(0,0,0,0);
+}
+/*------------------------------------
+ * PAGES: Inquire
+ *------------------------------------*/
+@media @desktop{
+section[data-section-id="64bea9054ff95e0ba80e52fb"]{
+  .fe-block:first-child{
+    position: sticky !important;
+    top: 10%;
+    
+}
+  }}
+
+/*------------------------------------
+ * PAGES: Services
+ *------------------------------------*/
+@media @desktop{
+section[data-section-id="64bef7e360c59538ec7dcd05"]{
+   .fe-block:first-child{
+    position: sticky !important;
+    top: 0%;
+    height: 100vh !important;
+}
+  }}
+
+
+section.rotation{
+  img{
+    animation: rotateLogo 39s linear infinite ;
+  }
+}
