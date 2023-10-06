@@ -60,13 +60,11 @@ html{
   scroll-behavior:smooth;
 }
 
-h2, h3{
+h2, h3, h4{
   font-weight: 200!important;
 }
 
-p{
-  font-weight: 100!important;
-}
+
 //DEFINE KEYFRAMES
 
 @keyframes rotateLogo {
@@ -76,6 +74,20 @@ p{
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeout
+{
+  0%{
+    opacity:1;
+  }
+  40%{
+    opacity:1;
+  }
+  100%
+  {
+    opacity:0;
   }
 }
 
@@ -134,15 +146,25 @@ FIX IG ISSUE
 
 //inquire button
 
-section[data-section-id="64c2fad5c0f1f56b1511235c"]
+
 
 /*------------------------------------
  *  FOOTER
  *------------------------------------*/
+#block-yui_3_17_2_1_1690499338146_53575, #block-74914135aa9bffd52818 { img{
+  transform: scale(.5)
+  
+  }
+  
+}
+
+
+
 
 /*------------------------------------
  * PAGES: HOME
  *------------------------------------*/
+//code for removed sections just in case we need it
 
 // add back in if needed -translateY(-120%)
 
@@ -174,6 +196,172 @@ section[data-section-id="64c00f03b3b82b7cffc676fd"]{ .page-section .section-bord
 .page-section.transparent .section-border {
   background-color: rgba(0,0,0,0);
 }
+
+// transparent sections
+section.transparent {
+  .page-section .section-border {
+     background-color: transparent !important;
+  }
+  background-color: transparent !important;
+  .section-background {
+    background-color: transparent !important;
+  }
+}
+//ADDED TO RESOLVE BROWSER COMPATIBILITY/
+.page-section {
+transform: translate3d(0,0,0) !important;
+}
+//hiding section
+section[data-section-id="64c00f03b3b82b7cffc676fd"]{
+  display: none;
+}
+
+
+//end old code
+
+//new header section 
+
+#block-yui_3_17_2_1_1691782426840_4543 img{
+  //animation: fadeout 9s forwards;
+  //animation-iteration-count: 1;
+  opacity: .5 !important;
+}
+
+@media @desktop{
+section[data-section-id="64c3001407e6fd711cddfb67"]{
+   .fe-block:nth-child(2){
+    position: sticky !important;
+    top: 0% !important;
+    height: 100vh !important;
+}
+  }}
+
+/** Fluid Video Block**/
+
+section[data-section-id="64c3001407e6fd711cddfb67"]{
+.video-block {
+  .sqs-native-video .native-video-player {
+    padding-top: 0 !important;
+  }
+
+  .video-player .plyr__poster {
+    object-fit:cover !important;
+    background-size:cover !important;
+  }
+  
+  .video-player .plyr video {
+  object-fit: cover !important;
+}
+  .embed-block-wrapper {
+    height: 100% !important;
+  }
+  .intrinsic {
+    height: 100% !important;
+  }
+
+  .sqs-block-content {
+    height: 100% !important;
+  }
+
+  .sqs-native-video {
+    height: 100% !important;
+  }
+  
+  
+}
+}
+//hover images 
+#block-e3589d198eeacf2ff363, #block-28b1132afc8054bb76c9, #block-e2d2de915f4fee9c20b1, #block-a73400989877b9b0232b{
+  transition: .5s linear;
+  }
+
+
+#block-e3589d198eeacf2ff363:hover{
+  opacity: 0;
+  transition: 1s linear;
+  transition-timing-function: ease-in-out;
+}
+
+#block-28b1132afc8054bb76c9:hover{
+  opacity: 0;
+  transition: 1s linear;
+  transition-timing-function: ease-in-out;
+}
+#block-e2d2de915f4fee9c20b1:hover{
+  opacity: 0;
+  transition: 1s linear;
+  transition-timing-function: ease-in-out;
+}
+#block-a73400989877b9b0232b:hover{
+  opacity: 0;
+  transition: 1s linear;
+  transition-timing-function: ease-in-out;
+}
+
+  
+@media @desktop{
+
+#span1:hover::before{
+  background: url(https://static1.squarespace.com/static/647e0de217a3bd2f52d87c84/t/64dfbb4403e9c614ddfea4d3/1692384069217/Group+3915.png);
+  content: '';
+  height:25vw;
+  width: 20vw;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  position: absolute;
+  left: 2vw;
+  top: -25%;
+  //transform: translate(86vw, 6vw);
+  z-index: 1!important;
+ 
+}
+
+#span2:hover::before{
+  background: url(https://static1.squarespace.com/static/647e0de217a3bd2f52d87c84/t/64dfbb44b844535cc3bde75c/1692384068523/Site+Plan.png);
+  content: '';
+  height:25vw;
+  width: 20vw;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  position: absolute;
+  right: 2vw;
+  top: -5%;
+  //transform: translate(86vw, 6vw);
+  z-index: 20!important;
+ 
+}
+
+#span3:hover::before{
+  background: url(https://static1.squarespace.com/static/647e0de217a3bd2f52d87c84/t/64dfbb44b92322393df435aa/1692384069218/Lake+Side+%233.png);
+  content: '';
+  height:25vw;
+  width: 20vw;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  position: absolute;
+  left: 2vw;
+  top: 38%;
+  //transform: translate(86vw, 6vw);
+  z-index: 20!important;
+ 
+}
+
+#span4:hover::before{
+  background: url(https://static1.squarespace.com/static/647e0de217a3bd2f52d87c84/t/64dfbb44b7229a67beef1838/1692384069207/Kitchen-Living+Room+%233b.png);
+  content: '';
+  height:25vw;
+  width: 20vw;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  position: absolute;
+  right: 5vw;
+  top: 60%;
+  //transform: translate(86vw, 6vw);
+  z-index: 20!important;
+ 
+  }}
+
+
 /*------------------------------------
  * PAGES: Inquire
  *------------------------------------*/
@@ -186,6 +374,41 @@ section[data-section-id="64bea9054ff95e0ba80e52fb"]{
 }
   }}
 
+/** Fluid Video Block**/
+
+section[data-section-id="64bea9054ff95e0ba80e52fb"]{
+.video-block {
+  .sqs-native-video .native-video-player {
+    padding-top: 0 !important;
+  }
+
+  .video-player .plyr__poster {
+    object-fit:cover !important;
+    background-size:cover !important;
+  }
+  
+  .video-player .plyr video {
+  object-fit: cover !important;
+}
+  .embed-block-wrapper {
+    height: 100% !important;
+  }
+  .intrinsic {
+    height: 100% !important;
+  }
+
+  .sqs-block-content {
+    height: 100% !important;
+  }
+
+  .sqs-native-video {
+    height: 100% !important;
+  }
+  
+  
+}
+}
+
 /*------------------------------------
  * PAGES: Services
  *------------------------------------*/
@@ -197,6 +420,23 @@ section[data-section-id="64bef7e360c59538ec7dcd05"]{
     height: 100vh !important;
 }
   }}
+
+
+section[data-section-id="64c3001407e6fd711cddfb67"] .plyr__video-wrapper:after{
+  background: url('https://static1.squarespace.com/static/647e0de217a3bd2f52d87c84/t/64f768006dad2421d67b5d72/1693935616709/O.png');
+  content: '';
+  //background-color: red!important;
+  height:4vw;
+  width: 12vw;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  position: absolute;
+  top: 9vw;
+  left: 5vw;
+  //transform: translate(-39vw, 5vw);
+  z-index: 10;
+
+}
 
 
 section.rotation{
